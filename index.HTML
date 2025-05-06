@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sources/style.css">
+    <title>Prueba Paola Vargas</title>
+</head>
+<body class="page">
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#register" class="header__link">
+                        <img src=""class="navIco"><h3 class="nameIco">Registro</h3>
+                    </a></li>
+                    <li class="header__nav-item"><a href="#visualization" class="header__link">
+                        <img src="" class="navIco"><h3 class="nameIco">Visualización</h3>
+                    </a></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main">
+        <div class="dynamic-content">
+            <div class="dynamic-site">
+                    <aside class="about__aside">
+                        <img src="/sources/img/FinZen.png" alt="FinZen - tus finanzas en equilibrio" class="about__aside-img">
+                        <ul class="about__nav-list">
+                            <li class="menu-item"><a href="#register" class="register__link link">Registro</a></li>
+                            <li class="menu-item"><a href="#visualization" class="visualization__link link">Visualización</a></li>
+                        </ul>
+                    </aside>
+                    <div class="content">
+                    <section class="active section" id="register">
+                        <div class="register__content">
+                            <div class="register__information">
+                                <h2 class="register__heading">Registra tus transacciones financieras</h2>
+                                    <div class="register__form">
+                                        <form class="form">
+                                            <label for="date">Fecha:</label>
+                                            <input type="date" id="date" name="date-register" required>
+            
+                                            <label for="type">tipo de transacción:</label>
+                                            <select id="type" name="type" required>
+                                                <option value="">-- Elige una opción --</option>
+                                                <option value="ingresos">Ingresos</option>
+                                                <option value="egresos">Egresos</option>
+                                            </select>
+                                            <div id="categoriaIngreso" class="categoria" style="display: none;">
+                                                <label for="categoriaIngresoSelect">Categoría (ingreso):</label>
+                                                <select id="categoriaIngresoSelect">
+                                                  <option value="ventas">Ventas</option>
+                                                  <option value="servicios">Servicios</option>
+                                                  <option value="intereses">Intereses</option>
+                                                  <option value="reembolsos">Reembolsos</option>
+                                                  <option value="Otros">Otros Ingresos</option>
+                                                </select>
+                                            </div>
+                                            <div id="categoriaEgreso" class="categoria" style="display: none;">
+                                                <label for="categoriaEgresoSelect">Categoría (egreso):</label>
+                                                <select id="categoriaEgresoSelect">
+                                                  <option value="alquiler">Alquiler</option>
+                                                  <option value="servicios">Servicios</option>
+                                                  <option value="transporte">Transporte</option>
+                                                  <option value="alimentos">Alimentos</option>
+                                                  <option value="insumos">Insumos</option>
+                                                  <option value="publicidad">Publicidad</option>
+                                                  <option value="honorarios">Honorarios</option>
+                                                  <option value="impuestos">Impuestos</option>
+                                                  <option value="suscripciones">Suscripciones</option>
+                                                  <option value="otrosEgre">Otros Egresos</option>
+                                                </select>
+                                              </div>
+                                            <label for="description">Descripción:</label>
+                                            <textarea id="description" class="textarea" name="description" rows="4" required></textarea>
+            
+                                            <button type="submit" class="button">Enviar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="visualization section" id="visualization">
+                        <div class="visualization__content">
+                            <h2 class="visualization__title">Visualización de todas las transacciones reaizadas a la fecha</h2>                       
+                                    <div class="container_visualization">
+                                                <div class="visualization_card">
+                                                    <div class="card_titlte">Ver todas las transacciones</div>
+                                                    <div class="card_descrip">Transacciones registradas en ingresos y egresos</div>
+                                                    <button class="card_buttom frontend_buttom">Ver más</button>
+                                                </div>
+                                                <div class="visualization_card">
+                                                    <div class="card_titlte">Ver resumen mensual</div>
+                                                    <div class="card_descrip">Balance mensual de registro de transacciones.</div>
+                                                    <button class="card_buttom wordpress_buttom">Ver más</button>
+                                                </div>
+                                                <div class="visualization_card">
+                                                    <div class="card_titlte">Resumen por categoría</div>
+                                                    <div class="card_descrip">Genere la visualización de las transacciones por las categorías asignadas.</div>
+                                                    <button class="card_buttom DataAnalyst_buttom">Ver más</button>
+                                                </div>
+                                                                     
+                                    </div>
+                            <!-- <div class="modal_frontend">
+                                <div class="modal_containerFrontend modal_container">
+                                    <p class="modal_info">
+                                        a
+                                    </p>
+                            
+                                    <div class="modal_projectOne">
+                                        <img class="img_projectOne" src="sources/img/projectOne.png" alt="BookStore project preview" title="Project page">
+                                        <div class="project_details">
+                                            <p>
+                                                a
+                                            </p>                    
+                                            
+                                        </div>
+                                    </div>
+                            
+                                    <button class="close_modal close">Close</button>
+                                </div>
+                            </div> -->
+                            
+                            <!-- <div class="modal_Wordpress">
+                                <div class="modal_containerWordpress modal_container">
+                                    <p class="modal_info">
+                                        a
+                                    </p>
+                            
+                                    <div class="modal_projectTwo project">
+                                        <h2 class="tittle_projectTwo">Practice project, Festival Tours SAS company.</h2>
+                                        <p>
+                                            a
+                                        </p> 
+                                        <div class="img_containerTwo">
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="modal_projectTwo">
+                                        <h2 class="tittle_projectTwo">h</h2>
+                                        <p>
+                                            
+                                        </p> 
+                                        <div class="img_containerTwo img_pinneaple">
+                                            <figure>
+                                                <img class="img_projectTwo " src="sources/img/imageWordpressThree.png" alt="Original website Pinneaple" title="Company's page">
+                                                <figcaption class="img_desc">Pinneaple's page</figcaption>
+                                            </figure>
+                                        </div>
+                                        </div>
+                                    </div>
+                            
+                                    <button class="close_modalWordpress close">Close</button>
+                                </div>
+                            </div> -->
+            
+                            <!-- <div class="modal_DataAnalyst">
+                                <div class="modal_containerDataAnalyst modal_container ">
+                                    <p class="modal_info">
+                                        Specialized in Data Analysis, focusing on data visualization, statistical analysis, and business intelligence. Skilled in using tools such as SQL, Python, and Power BI to extract insights and support data-driven decision-making
+                                    </p>
+                            
+                                    <div class="modal_projectThree">
+                                        <h2 class="tittle_projectThree">Final Data Analysis Project: Insights and Business Intelligence </h2>
+                                        <p class="projectThree_info"><b>Strategic Analysis of Valencia C.F. in La Liga Española</b> This project presents a comprehensive strategic analysis of Valencia C.F. in the Spanish La Liga, with a specific focus on identifying the optimal approach to securing victory against Barcelona F.C. The analysis was conducted using Looker Studio, leveraging advanced data visualization and analytical techniques to evaluate key performance indicators, tactical trends, and opponent weaknesses.
+            
+                                            The study integrates statistical insights, historical match data, and predictive modeling to formulate a winning strategy. The proposed approach includes tactical adjustments, player positioning, and data-driven decision-making to enhance Valencia C.F.'s chances of success against one of the league’s strongest teams.
+                                        </p> 
+                                        <div class="project_details">         
+                                            <div class="project_icons">
+                                                <iframe width="560" height="315" 
+                                                    src="https://www.youtube.com/embed/OAO-pNQ1k4Q?start=2448" 
+                                                    frameborder="0" allowfullscreen>
+                                                </iframe>                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                            
+                                    <button class="close_modalDataAnalyst">Close</button>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+            
+    </main>
+    <footer class="footer">
+        <p class="footer__text">© Paola Vargas 2025 hecho con amor</p>
+        <p class="footer__text">Prueba para TEVA</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
