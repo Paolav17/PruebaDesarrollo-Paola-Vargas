@@ -38,7 +38,8 @@
                                         <form class="form">
                                             <label for="date">Fecha:</label>
                                             <input type="date" id="date" name="date-register" required>
-            
+                                            <label for="amount">Monto:</label>
+                                            <input type="number" id="amount" name="amount-register" step="0.01" min="0" required>
                                             <label for="type">tipo de transacción:</label>
                                             <select id="type" name="type" required>
                                                 <option value="">-- Elige una opción --</option>
@@ -74,7 +75,12 @@
                                             <textarea id="description" class="textarea" name="description" rows="4" required></textarea>
             
                                             <button type="submit" class="button">Enviar</button>
+
                                         </form>
+                                        <div class="archive">
+                                        <input type="file" id="importCSV" accept=".csv">
+                                        <button id="importBtn" class="button">Importar CSV</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -82,104 +88,96 @@
                     </section>
                     <section class="visualization section" id="visualization">
                         <div class="visualization__content">
-                            <h2 class="visualization__title">Visualización de todas las transacciones reaizadas a la fecha</h2>                       
+                            <h3 class="visualization__title">Visualización de todas las transacciones reaizadas a la fecha</h3>                       
                                     <div class="container_visualization">
                                                 <div class="visualization_card">
                                                     <div class="card_titlte">Ver todas las transacciones</div>
                                                     <div class="card_descrip">Transacciones registradas en ingresos y egresos</div>
-                                                    <button class="card_buttom frontend_buttom">Ver más</button>
+                                                    <button class="card_buttom view_buttom">Ver más</button>
                                                 </div>
                                                 <div class="visualization_card">
                                                     <div class="card_titlte">Ver resumen mensual</div>
                                                     <div class="card_descrip">Balance mensual de registro de transacciones.</div>
-                                                    <button class="card_buttom wordpress_buttom">Ver más</button>
+                                                    <button class="card_buttom monthly_buttom">Ver más</button>
                                                 </div>
                                                 <div class="visualization_card">
                                                     <div class="card_titlte">Resumen por categoría</div>
                                                     <div class="card_descrip">Genere la visualización de las transacciones por las categorías asignadas.</div>
-                                                    <button class="card_buttom DataAnalyst_buttom">Ver más</button>
+                                                    <button class="card_buttom Category_buttom">Ver más</button>
                                                 </div>
                                                                      
                                     </div>
-                            <!-- <div class="modal_frontend">
-                                <div class="modal_containerFrontend modal_container">
+                            <div class="modal_viewTrans">
+                                <div class="modal_containerviewTrans modal_container">
                                     <p class="modal_info">
-                                        a
+                                        Espacio para ver las transacciones registradas.
                                     </p>
-                            
-                                    <div class="modal_projectOne">
-                                        <img class="img_projectOne" src="sources/img/projectOne.png" alt="BookStore project preview" title="Project page">
-                                        <div class="project_details">
-                                            <p>
-                                                a
-                                            </p>                    
-                                            
-                                        </div>
+                                    <div class="filter">
+                                        <label for="filtroTipo">Filtrar por tipo:</label>
+                                        <select id="filtroTipo">
+                                            <option value="">Todos</option>
+                                            <option value="ingresos">Ingresos</option>
+                                            <option value="egresos">Egresos</option>
+                                        </select>
+                                    
+                                        <label for="filtroCategoria">Filtrar por categoría:</label>
+                                        <select id="filtroCategoria">
+                                            <option value="ventas">Ventas</option>
+                                                  <option value="servicios">Servicios</option>
+                                                  <option value="intereses">Intereses</option>
+                                                  <option value="reembolsos">Reembolsos</option>
+                                                  <option value="Otros">Otros Ingresos</option>
+                                                  <option value="alquiler">Alquiler</option>
+                                                  <option value="servicios">Servicios</option>
+                                                  <option value="transporte">Transporte</option>
+                                                  <option value="alimentos">Alimentos</option>
+                                                  <option value="insumos">Insumos</option>
+                                                  <option value="publicidad">Publicidad</option>
+                                                  <option value="honorarios">Honorarios</option>
+                                                  <option value="impuestos">Impuestos</option>
+                                                  <option value="suscripciones">Suscripciones</option>
+                                                  <option value="otrosEgre">Otros Egresos</option>
+
+                                        </select>
                                     </div>
-                            
-                                    <button class="close_modal close">Close</button>
+                                    
+
+                                    <div class="modal_showInfo">  
+                                        
+                                    </div>
+                                    <canvas id="monthlyChart" width="400" height="200"></canvas>
+                                    <button class="close_modal close">Cerrar</button>
                                 </div>
-                            </div> -->
+                            </div>
                             
-                            <!-- <div class="modal_Wordpress">
-                                <div class="modal_containerWordpress modal_container">
+                            <div class="modal_monthly">
+                                <div class="modal_containermonthly modal_container">
                                     <p class="modal_info">
-                                        a
+                                        Espacio para ver el resumen mensual de las transacciones.
                                     </p>
-                            
-                                    <div class="modal_projectTwo project">
-                                        <h2 class="tittle_projectTwo">Practice project, Festival Tours SAS company.</h2>
-                                        <p>
-                                            a
-                                        </p> 
-                                        <div class="img_containerTwo">
-                                           
-                                        </div>
-                                    </div>
-                                    <div class="modal_projectTwo">
-                                        <h2 class="tittle_projectTwo">h</h2>
-                                        <p>
-                                            
-                                        </p> 
-                                        <div class="img_containerTwo img_pinneaple">
-                                            <figure>
-                                                <img class="img_projectTwo " src="sources/img/imageWordpressThree.png" alt="Original website Pinneaple" title="Company's page">
-                                                <figcaption class="img_desc">Pinneaple's page</figcaption>
-                                            </figure>
-                                        </div>
-                                        </div>
+                                    
+                                    <div class="modal_viewMonthly ">
+                                    
                                     </div>
                             
-                                    <button class="close_modalWordpress close">Close</button>
+                                    <button class="close_modalmonthly close">Cerrar</button>
                                 </div>
-                            </div> -->
+                            </div>
             
-                            <!-- <div class="modal_DataAnalyst">
-                                <div class="modal_containerDataAnalyst modal_container ">
+                            <div class="modal_category">
+                                <div class="modal_conteinercategory modal_container ">
                                     <p class="modal_info">
-                                        Specialized in Data Analysis, focusing on data visualization, statistical analysis, and business intelligence. Skilled in using tools such as SQL, Python, and Power BI to extract insights and support data-driven decision-making
+                                        Espacio para ver resumen de transacciones por categoría
                                     </p>
-                            
-                                    <div class="modal_projectThree">
-                                        <h2 class="tittle_projectThree">Final Data Analysis Project: Insights and Business Intelligence </h2>
-                                        <p class="projectThree_info"><b>Strategic Analysis of Valencia C.F. in La Liga Española</b> This project presents a comprehensive strategic analysis of Valencia C.F. in the Spanish La Liga, with a specific focus on identifying the optimal approach to securing victory against Barcelona F.C. The analysis was conducted using Looker Studio, leveraging advanced data visualization and analytical techniques to evaluate key performance indicators, tactical trends, and opponent weaknesses.
-            
-                                            The study integrates statistical insights, historical match data, and predictive modeling to formulate a winning strategy. The proposed approach includes tactical adjustments, player positioning, and data-driven decision-making to enhance Valencia C.F.'s chances of success against one of the league’s strongest teams.
-                                        </p> 
-                                        <div class="project_details">         
-                                            <div class="project_icons">
-                                                <iframe width="560" height="315" 
-                                                    src="https://www.youtube.com/embed/OAO-pNQ1k4Q?start=2448" 
-                                                    frameborder="0" allowfullscreen>
-                                                </iframe>                                        
-                                            </div>
-                                        </div>
+                                    <button id="btnResumCategory" class="close resum">Ver resumen por categoría</button>
+                                    <div class="modal_vewCategory" id="modal_vewCategory">
+                                         
                                     </div>
                                     
                             
-                                    <button class="close_modalDataAnalyst">Close</button>
+                                    <button class="close_modalCategory close">Cerrar</button>
                                 </div>
-                            </div> -->
+                            </div>
                             
                         </div>
                     </section>
@@ -194,5 +192,6 @@
         <p class="footer__text">Prueba para TEVA</p>
     </footer>
     <script src="../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
